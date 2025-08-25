@@ -1,57 +1,74 @@
-# Planetarium API
+🌌 Planetarium API
 
-REST API для онлайн-бронювання квитків у планетарій. Можна переглядати шоу, розклад, бронювати місця та переглядати свої замовлення.
+A REST API for online ticket booking at a planetarium.
+You can browse shows, check the schedule, book seats, and view your reservations.
 
-## Стек
-- Python 3.11
-- Django 4.2
-- Django REST Framework
-- SQLite (можна легко змінити на PostgreSQL)
-- Docker
+🚀 Stack
 
-## Як запустити
+Python 3.11
 
-1. Клонувати репозиторій
-```bash
+Django 4.2
+
+Django REST Framework
+
+SQLite (easily switchable to PostgreSQL)
+
+Docker
+
+⚙️ How to run
+
+Clone the repository
+
 git clone https://github.com/your-username/planetarium-api.git
 cd planetarium-api
-```
 
-2. Створити `.env` файл (опціонально)
 
-3. Запустити проект
-```bash
+Create a .env file (optional)
+
+Start the project
+
 docker-compose up --build
-```
 
-4. Відкрити в браузері:
-```
+
+Open in browser:
+
 http://127.0.0.1:8000/api/
-```
 
-## Створити суперкористувача (опціонально для входу в адмінку)
-```bash
+
+Create a superuser (optional, for admin panel access):
+
 docker-compose run app python manage.py createsuperuser
-```
 
-## Основні ендпоінти
+📌 Main Endpoints
+| Method | URL                   | Description          |
+| ------ | --------------------- | -------------------- |
+| GET    | /api/shows/           | List of shows        |
+| GET    | /api/sessions/        | List of sessions     |
+| GET    | /api/reservations/my/ | My reservations      |
+| POST   | /api/reservations/    | Create a reservation |
 
-| Метод | URL                          | Опис                         |
-|-------|------------------------------|------------------------------|
-| GET   | /api/shows/                 | Список шоу                   |
-| GET   | /api/sessions/              | Список сеансів               |
-| GET   | /api/reservations/my/       | Мої бронювання               |
-| POST  | /api/reservations/          | Створити бронювання          |
+✨ Features
 
-## Особливості
-- Валідація зайнятих місць
-- Підтримка завантаження постерів
-- Фільтри в адмінці
-- Перегляд тільки своїх бронювань
+Seat availability validation
 
-## Скріни та структура БД
-- Скріншоти та діаграма додаються в папку `docs/`
+Poster upload support
 
----
+Filters in the admin panel
 
-Проект створено як портфоліо для демонстрації роботи з Django REST Framework та Docker
+View only your own reservations
+
+🖼️ Screenshots & Database Structure
+
+Screenshots and diagrams are available in the docs/ folder
+
+🔮 Future improvements
+
+JWT authentication
+
+Payment integration
+
+Email notifications for reservations
+
+CI/CD pipeline setup
+
+📌 The project was created as a portfolio to demonstrate work with Django REST Framework and Docker.
