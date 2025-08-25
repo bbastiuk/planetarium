@@ -1,14 +1,37 @@
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.egg-info/
+.eggs/
+
+# Databases
 *.sqlite3
+*.db
+
+# Env
 .env
 .env.*
+
+# IDE
 .idea/
 .vscode/
+
+# Django
 media/
 static/
+
+# Node.js
 node_modules/
-*.db
+
+# Logs
 *.log
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
