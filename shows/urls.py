@@ -15,6 +15,7 @@ from drf_spectacular.views import (
     SpectacularRedocView,
 )
 
+
 router = DefaultRouter()
 router.register("shows", AstronomyShowViewSet)
 router.register("themes", ShowThemeViewSet)
